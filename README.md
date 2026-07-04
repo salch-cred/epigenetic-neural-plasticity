@@ -20,3 +20,14 @@ Run the demo to train the model on a dynamically changing task:
 ```bash
 python examples/train_epigenetic_plasticity.py
 ```
+
+
+## FastAPI API Service
+The project includes a FastAPI server wrapper. 
+
+### Running the API
+```bash
+uvicorn src.api:app --host 0.0.0.0 --port 8000
+```
+- **Interactive docs**: Navigate to `/docs` for swagger documentation.
+- **POST `/forward`**: Pass `{"x": [0.1, 0.2, 0.3, 0.4, 0.5]}` to query the model.
